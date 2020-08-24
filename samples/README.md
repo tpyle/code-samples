@@ -39,3 +39,7 @@ Ex:
 2^3 x 3^2    2^6    3 x 5^2
 2^9 x 3^3 x 5^2
 ```
+
+### 8. `web-server`
+
+A simple web server. Should respond to GET requests (at least). We'll see how long it takes in some of the more basic languages (looking at you, C)
