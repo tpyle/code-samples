@@ -16,9 +16,10 @@ The current list of languages that I plan to have in here are as follows:
 9. Kotlin
 10. Perl
 11. PHP
-12. Python(3)
-13. Ruby
-14. Rust
-15. Scala
+12. Powershell
+13. Python(3)
+14. Ruby
+15. Rust
+16. Scala
 
 Some of these I've never used before, so we'll see how they turn out.
