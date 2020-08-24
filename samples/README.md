@@ -3,6 +3,10 @@ This directory contains various code samples. The idea is that I'll try to creat
 
 
 ## Current/Planned Examples
+### 0. `hello`
+
+The old fashioned hello world script. Decided it might be useful/traditional to include it.
+
 ### 1. `sqrt`
 
 This script determines the square root of a number
