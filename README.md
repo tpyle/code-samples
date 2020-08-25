@@ -21,5 +21,6 @@ The current list of languages that I plan to have in here are as follows:
 14. Ruby
 15. Rust
 16. Scala
+17. TypeScript
 
 Some of these I've never used before, so we'll see how they turn out.
