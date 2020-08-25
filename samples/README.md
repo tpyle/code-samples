@@ -42,4 +42,7 @@ Ex:
 
 ### 8. `web-server`
 
-A simple web server. Should respond to GET requests (at least). We'll see how long it takes in some of the more basic languages (looking at you, C)
+A simple web server. Should respond to GET requests (at least). We'll see how
+long it takes in some of the more basic languages (looking at you, C).
+
+For clarification, I don't mean CGI type stuff, I mean a program listening on a port and sending/receiving content.
