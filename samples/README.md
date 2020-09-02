@@ -19,7 +19,7 @@ A script which prints out a 5x5 multiplication table
 
 New Concepts:
 * String Formatting
-* Integer operations (does that count?)
+* Loops
 
 ### 2. `Reverse Arguments`
 
@@ -28,14 +28,12 @@ This script takes in an arbitrary number of cli args, and will print them out in
 New Concepts:
 * Argument Interaction
 * List Manipulation
-* Loops
 
 ### 3. `sqrt`
 
 This scripts take in an arbitrary number of cli args, and will print out the sqrt of each of them.
 
 New Concepts:
-* Loops if not covered in 2
 * Type conversion from strings to integers/floats
 
 ### 4. `primality`
