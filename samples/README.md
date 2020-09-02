@@ -1,48 +1,62 @@
 # Code Samples
 This directory contains various code samples. The idea is that I'll try to create the same thing in each of the languages in this directoy.
 
+## Concepts
+Each sample will be used to add on an additional concept (or two) on top of the previous sample. Underneath of each project description is the list of 'core concepts' that it teaches.
 
 ## Current/Planned Examples
 ### 0. `hello`
 
-The old fashioned hello world script. Decided it might be useful/traditional to include it.
+The old fashioned hello world script.
 
-### 1. `sqrt`
+New Concepts:
+* Environment Setup
+* Printing/Interacting with stdout.
 
-This script determines the square root of a number
+### 1. `Multiplication Table`
 
-### 2. `primality`
+A script which prints out a 5x5 multiplication table
 
-This script takes in a command line argument and attempts to determine if it a prime number
+New Concepts:
+* String Formatting
+* Integer operations (does that count?)
 
-### 3. `table`
+### 2. `Reverse Arguments`
 
-This script prints a multiplication table up to 10x10
+This script takes in an arbitrary number of cli args, and will print them out in reverse order, or one line (so they could be piped into xargs or something).
 
-### 4. `grep`
+New Concepts:
+* Argument Interaction
+* List Manipulation
+* Loops
 
-Basically simplistic `grep` functionality
+### 3. `sqrt`
 
-### 5. `web`
+This scripts take in an arbitrary number of cli args, and will print out the sqrt of each of them.
 
-This script will download a website (provided via CLI arg) and will count the number of links in it
+New Concepts:
+* Loops if not covered in 2
+* Type conversion from strings to integers/floats
 
-### 6. `mongo`
+### 4. `primality`
 
-This script will interact with mongoDB (full CRUD)
+This script takes in an arbitrary number of cli arguments, and attempts to determine whether or not they are primary numbers.
 
-### 7. `threading`
- 
-This script will spin up threads to calculate the prime factorization of multiple CLI arguments together
-Ex:
-```$ threading 72 64 75
-2^3 x 3^2    2^6    3 x 5^2
-2^9 x 3^3 x 5^2
-```
+New Concepts:
+* Interaction with libraries/modules if not included in previous lessons
 
-### 8. `web-server`
+### 5. `wc`
 
-A simple web server. Should respond to GET requests (at least). We'll see how
-long it takes in some of the more basic languages (looking at you, C).
+Like the `wc` command, Basically either uses the file provided in a cli arg or will read from stdin. Counts the number of characters and new lines in a file.
 
-For clarification, I don't mean CGI type stuff, I mean a program listening on a port and sending/receiving content.
+New Concepts:
+* Branching logic based of whether an argument is provided
+* Reading from stdin 
+
+### 6. `Efficient sqrts`
+
+A modificaation of the `sqrt` script to use multiple threads/process for each sqrt job (if possible)
+
+New Concepts:
+* threading/multiprocessing
+* piping if using multiprocessing (depending on the language)
