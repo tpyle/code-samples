@@ -9,22 +9,24 @@ function findSqrt {
         x=$(echo "scale=10; ($x + $y) / 2" | bc -l)
         y=$(echo "scale=10; $number / $x" | bc -l)
     done
-    echo "$x"
+    echo "$number => $x"
 }
 
 
 
-if [ "$#" -ne 1 ]; then
-    echo "Error: Usage ./sqrt.sh <number>"
+if [ "$#" -eq 0 ]; then
+    echo "Error: Usage ./sqrt.sh <number> [<number> ...]"
     exit 1
 fi
 
-number=$1
-re='^[0-9]+([.][0-9]+)?$'
+for number in $@
+do
+    re='^[0-9]+([.][0-9]+)?$'
 
-if ! [[ $number =~ $re ]]; then
-    echo "Error: Expected to receive a positive number, received $number"
-    exit 2
-fi
+    if ! [[ $number =~ $re ]]; then
+        echo "Error: Expected to receive a positive number, received $number"
+        exit 2
+    fi
 
-findSqrt $number
+    findSqrt $number
+done
