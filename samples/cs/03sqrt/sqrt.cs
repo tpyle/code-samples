@@ -15,18 +15,20 @@ namespace SquareRoot {
         }
 
         static void Main(string[] args) {
-            if (args.Length != 1) {
-                Console.Error.WriteLine("Error: Expected to receive 1 argument ./sqrt <number>.");
+            if (args.Length < 1) {
+                Console.Error.WriteLine("Error: Expected to receive at least 1 argument ./sqrt <number>  [<numbe> ...].");
                 System.Environment.Exit(1);
             }
-            double number = 0;
-            try {
-                number = Double.Parse(args[0]);
-            } catch (System.FormatException) {
-                Console.Error.WriteLine(string.Format("Error: Expected to receive 1 argument that was a number. Received {0}", args[0]));
-                System.Environment.Exit(2);
+            foreach (string arg in args) {
+                double number = 0;
+                try {
+                    number = Double.Parse(arg);
+                } catch (System.FormatException) {
+                    Console.Error.WriteLine(string.Format("Error: Expected to receive 1 argument that was a number. Received {0}", arg));
+                    System.Environment.Exit(2);
+                }
+                Console.WriteLine(number.ToString() + " => " + FindSqrt(number).ToString());
             }
-            Console.WriteLine(FindSqrt(number));
         }
     }
 }
