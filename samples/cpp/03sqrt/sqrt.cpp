@@ -14,15 +14,22 @@ double findSqrt(double number) {
 
 
 int main(int argc, char** argv) {
-    if (argc != 2) {
-        std::cerr << "Error: Usage " << argv[0] << " <number>" << std::endl;
+
+
+    if (argc < 2) {
+        std::cerr << "Error: Usage " << argv[0] << " <number> [number ...]" << std::endl;
         return 1;
     }
-    char* end;
-    double f = std::strtod(argv[1], &end);
-    if (*end != 0) {
-        std::cout << "Error: Expected to receive a double. Received " << argv[1] << std::endl;
-        exit(2);
+
+    for (int i = 1; i < argc; i++) {
+
+        char* end;
+        double f = std::strtod(argv[i], &end);
+        if (*end != 0) {
+            std::cout << "Error: Expected to receive a double. Received " << argv[i] << std::endl;
+            exit(2);
+        }
+        std::cout << f << " => " << findSqrt(f) << std::endl;
+
     }
-    std::cout << findSqrt(f) << std::endl;
 }
