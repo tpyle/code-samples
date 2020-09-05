@@ -1,4 +1,5 @@
 import "dart:io";
+import "package:sprintf/sprintf.dart";
 
 
 const accuracy = 0.00000001;
@@ -15,17 +16,19 @@ double find_sqrt(double number) {
 
 
 void main(List<String> arguments) {
-    if (arguments.length != 1) {
-        stderr.write("Error: usage dart sqrt.dart <number>\n");
+    if (arguments.length < 1) {
+        stderr.write("Error: usage dart sqrt.dart <number> [<number> ...]\n");
         exit(1);
     }
-    double number = 0;
-    try {
-        number = double.parse(arguments[0]);
+    for (String arg in arguments) {
+        double number = 0;
+        try {
+            number = double.parse(arg);
+        }
+        on FormatException {
+            stderr.write("Error: Expected to receive a double. Received '" + arg + "'\n");
+            exit(2);
+        }
+        print(sprintf("%f => %f", [number, find_sqrt(number)]));
     }
-    on FormatException {
-        stderr.write("Error: Expected to receive a double. Received '" + arguments[0] + "'\n");
-        exit(2);
-    }
-    print(find_sqrt(number));
 }
