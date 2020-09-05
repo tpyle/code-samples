@@ -15,17 +15,20 @@ double findSqrt(double number) {
 
 
 int main(int argc, char** argv) {
-    if (argc != 2) {
-        printf("Error: Usage %s <number>\n", argv[0]);
+    if (argc < 2) {
+        printf("Error: Usage %s <number> [<number> ...]\n", argv[0]);
         return 1;
     }
-    char* eptr;
-    double number = strtod(argv[1], &eptr);
+
+    for (int i = 1; i < argc; i++) {
+        char* eptr;
+        double number = strtod(argv[i], &eptr);
 
 
-    if (*eptr != 0) {
-        printf("Error: Expected to receive a number, recieved %s\n", argv[1]);
-        return 2;
+        if (*eptr != 0) {
+            printf("Error: Expected to receive a number, recieved %s\n", argv[i]);
+            return 2;
+        }
+        printf("%f => %f\n", number, findSqrt(number));
     }
-    printf("%f\n", findSqrt(number));
 }
