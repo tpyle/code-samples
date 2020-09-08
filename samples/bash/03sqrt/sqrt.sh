@@ -1,4 +1,4 @@
-#1/bin/bash
+#!/bin/bash
 
 function findSqrt {
     number=$1
