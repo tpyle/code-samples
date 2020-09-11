@@ -16,7 +16,7 @@ namespace SquareRoot {
 
         static void Main(string[] args) {
             if (args.Length < 1) {
-                Console.Error.WriteLine("Error: Expected to receive at least 1 argument ./sqrt <number>  [<numbe> ...].");
+                Console.Error.WriteLine("Error: Expected to receive at least 1 argument ./sqrt <number> [<number> ...].");
                 System.Environment.Exit(1);
             }
             foreach (string arg in args) {
