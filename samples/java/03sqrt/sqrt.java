@@ -1,6 +1,3 @@
-package sqrt;
-
-
 public class sqrt {
     final static double accuracy = 0.0000001;
 
@@ -15,18 +12,20 @@ public class sqrt {
     }
     
     public static void main(String[] args) {
-        if (args.length != 1) {
-            System.err.println("Error: Usage 'java sqrt <number>'");
+        if (args.length == 0) {
+            System.err.println("Error: Usage 'java sqrt <number> [<number> ...]'");
             System.exit(1);
         }
-        double number = 0;
-        try {
-        number = Double.parseDouble(args[0]);
-        } catch (java.lang.NumberFormatException e) {
-            System.err.println("Error: Expected a number, received '" + args[0] + "'");
-            System.exit(2);
+        for (String arg : args) {
+            double number = 0;
+            try {
+                number = Double.parseDouble(arg);
+            } catch (java.lang.NumberFormatException e) {
+                System.err.println(String.format("Error: Expected a number, received '%s'", arg));
+                System.exit(2);
+            }
+            System.out.println(String.format("%f => %f", number, findSqrt(number)));
         }
-        System.out.println(findSqrt(number));
     }
 
 }
