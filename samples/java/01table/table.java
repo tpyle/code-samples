@@ -1,6 +1,3 @@
-//package table;
-
-
 public class table {
     public static final int LIMIT = 5;
     public static void main(String[] args) {
