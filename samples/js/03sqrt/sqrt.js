@@ -12,7 +12,7 @@ function findSqrt(number) {
 
 if (require.main === module) {
     if (process.argv.length < 3) {
-        console.error("Error: Usage node sqrt.js <number>");
+        console.error("Error: Usage node sqrt.js <number> [<number> ...]");
         process.exit(1);
     }
     process.argv.slice(2).map(arg=>{
