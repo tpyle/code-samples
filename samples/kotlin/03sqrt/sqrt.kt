@@ -10,16 +10,18 @@ fun findSqrt(num: Double): Double {
 }
 
 fun main(args: Array<String>) {
-    if (args.size != 1) {
-        System.err.println("Error: Expected to receive an argument <number>");
+    if (args.size == 0) {
+        System.err.println("Error: Usage `kotlin sqrt <number> [<number> ...]`");
         System.exit(1);
     }
-    var number: Double = 0.0;
-    try {
-        number = args[0].toDouble();
-    } catch (e: NumberFormatException) {
-        System.err.println("Error: Expected to receive a number. Received '" + args[0] + "'");
-        System.exit(1);
+    for (arg in args) {
+        var number: Double = 0.0;
+        try {
+            number = arg.toDouble();
+        } catch (e: NumberFormatException) {
+            System.err.println(String.format("Error: Expected to receive a number. Received '%s'.", arg));
+            System.exit(1);
+        }
+        println(String.format("%f => %f", number, findSqrt(number)));
     }
-    print(findSqrt(number).toString() + "\n");
 }
