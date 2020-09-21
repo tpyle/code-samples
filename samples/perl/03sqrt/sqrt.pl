@@ -15,14 +15,15 @@ sub FindSqrt {
 
 
 $len = scalar(@ARGV);
-if ($len != 1) {
-    print STDERR "Error: Expected to receive $0 <number>\n";
+if ($len == 0) {
+    print STDERR "Error: Expected to receive $0 <number> [<number> ...]\n";
     exit(1);
 }
 
-my ($temp) = @ARGV;
 
-my $number = int($temp) or die "Expected to receive a number. Received '$temp'\n";
+foreach my $temp (@ARGV) {
+    my $number = int($temp) or die "Expected to receive a number. Received '$temp'\n";
 
-$val = FindSqrt($number);
-print("$val\n");
+    $val = FindSqrt($number);
+    print("$number => $val\n");
+}
