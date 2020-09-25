@@ -13,17 +13,20 @@ function findSqrt($number) {
     return $x;
 }
 
-if ($argc != 2) {
-    fwrite(STDERR, sprintf("Error: Usage ./%s <number>\n", $argv[0]));
+if ($argc < 2) {
+    fwrite(STDERR, sprintf("Error: Usage ./%s <number> [<number> ...]\n", $argv[0]));
     exit(1);
 }
 
-$number = floatval($argv[1]);
-if (strval($number) != $argv[1]) {
-    fwrite(STDERR, sprintf("Error: Expected to receive a number. Received '%s'\n", $argv[1]));
-    exit(2);
-}
+foreach (array_slice($argv, 1) as &$arg) {
+    $number = floatval($arg);
 
-echo sprintf("%f\n", findSqrt($number));
+    if (strval($number) != $arg) {
+        fwrite(STDERR, sprintf("Error: Expected to receive a number. Received '%s'\n", $arg));
+        exit(2);
+    }
+
+    printf("%f => %f\n", $number, findSqrt($number));
+}
 
 ?>
