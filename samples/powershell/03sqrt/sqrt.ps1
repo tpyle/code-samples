@@ -1,6 +1,6 @@
 param (
     [Parameter(Mandatory=$true)]
-    [double] $number
+    $numbers
 )
 
 
@@ -18,4 +18,4 @@ function findSqrt {
     return $x
 }
 
-findSqrt $number | Write-Host
+$numbers.Split(",") | ForEach-Object { [double]$_ } | ForEach-Object { "$_ => $(findSqrt $_)" } | Write-Host
