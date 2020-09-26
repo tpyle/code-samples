@@ -6,7 +6,7 @@ fun main() {
         } else {
             print(String.format("%-3d", a));
         }
-        for (b in 0..LIMIT) {
+        for (b in 1..LIMIT) {
             if (a == 0) {
                 print(String.format("%-3d", b));
             } else {

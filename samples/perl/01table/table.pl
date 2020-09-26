@@ -9,7 +9,7 @@ for $a (0 .. LIMIT) {
     } else {
         print(sprintf("%-3d", $a));
     }
-    for $b (0 .. LIMIT) {
+    for $b (1 .. LIMIT) {
         if ($a == 0) {
             print(sprintf("%-3d", $b));
         } else {

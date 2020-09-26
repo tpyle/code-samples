@@ -23,7 +23,7 @@ if (require.main == module) {
         } else {
             process.stdout.write(leftPad(a, 3));
         }
-        for (let b = 0; b <= LIMIT; b++) {
+        for (let b = 1; b <= LIMIT; b++) {
             if (a == 0) {
                 process.stdout.write(leftPad(b, 3));
             } else {

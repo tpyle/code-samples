@@ -9,7 +9,7 @@ for ($a = 0; $a <= LIMIT; $a++) {
     } else {
         printf("%-3d", $a);
     }
-    for ($b = 0; $b <= LIMIT; $b++) {
+    for ($b = 1; $b <= LIMIT; $b++) {
         if ($a == 0) {
             printf("%-3d", $b);
         } else {
