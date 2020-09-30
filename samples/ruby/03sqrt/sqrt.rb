@@ -10,17 +10,18 @@ def findSqrt(number)
     return x
 end
 
-if ARGV.length != 1
-    $stderr.puts "Error: Usage `ruby sqrt.rb <number>`"
+if ARGV.length < 1
+    $stderr.puts "Error: Usage `ruby sqrt.rb <number> [<number> ...]`"
     exit(1)
 end
 
+for arg in ARGV
+    if (false if Float(arg) rescue true)
+        $stderr.puts "Error: Expected to receive a number. Received '%s'" % [arg]
+        exit(2)
+    end
 
-if (false if Float(ARGV[0]) rescue true)
-    $stderr.puts "Error: Expected to receive a number. Received '%s'" % ARGV
-    exit(2)
+    number = arg.to_f
+
+    puts "%f => %f" % [number, findSqrt(number)]
 end
-
-number = ARGV[0].to_f
-
-puts findSqrt(number)
