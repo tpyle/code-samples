@@ -13,12 +13,14 @@ def is_prime(number):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Error: Usage python prime.py <number>")
+    if len(sys.argv) < 2:
+        print("Error: Usage python prime.py <number> [<number> ...]")
         sys.exit(1)
-    try:
-        number = float(sys.argv[1])
-    except ValueError:
-        print("Error: Expected a number. Received", sys.argv[1])
-        sys.exit(2)
-    print(is_prime(number))
+
+    for arg in sys.argv[1:]:
+        try:
+            number = int(arg)
+        except ValueError:
+            print("Error: Expected an integer. Received", arg)
+            sys.exit(2)
+        print(number, "=>", is_prime(number))
