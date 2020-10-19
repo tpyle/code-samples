@@ -17,11 +17,19 @@ find_sqrt(Number,X,Y) when abs(X-Y) > ?ACCURACY ->
 find_sqrt(_Number,X,_Y) ->
     X.
 
+parse(V) ->
+    try
+        list_to_float(V)
+    catch
+        error:badarg ->
+            list_to_integer(V)
+    end.
+
 for_args([]) ->
     [];
 for_args([H|T]) ->
-    try 
-        V = list_to_float(H),
+    try
+        V = parse(H),
         io:format("~w => ~w~n", [V, find_sqrt(V)]),
         for_args(T)
     catch
