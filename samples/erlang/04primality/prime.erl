@@ -3,8 +3,6 @@
 %%! -smp enable -sname factorial -mnesia debug verbose
 %%
 
--define(ACCURACY, 0.000001).
-
 is_prime(Number) when Number < 0 ->
     io:format("Error: Expected a positive integer. Received '~s'~n", [Number]),
     halt(3);
