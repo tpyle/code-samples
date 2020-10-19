@@ -6,7 +6,7 @@
 -define(ACCURACY, 0.000001).
 
 find_sqrt(Number) when Number < 0 ->
-    io:format("Error: Expected a positive integer. Received '~w'~n", [Number]),
+    io:format("Error: Expected a positive number. Received '~w'~n", [Number]),
     halt(3);
 find_sqrt(Number) ->
     find_sqrt(Number, Number, 1.0).
