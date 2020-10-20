@@ -21,7 +21,7 @@ func isPrime(number float64) (bool) {
 
 func main() {
     if len(os.Args) < 2 {
-        fmt.Println("Error: Usage ./prime <number> [<number> ...]");
+        fmt.Fprintln(os.Stderr, "Error: Usage ./prime <number> [<number> ...]");
         os.Exit(1);
     }
 

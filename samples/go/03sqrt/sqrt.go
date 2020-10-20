@@ -21,7 +21,7 @@ func findSqrt(number float64) (float64) {
 
 func main() {
     if (len(os.Args) < 2) {
-        fmt.Println("Error: Usage ./sqrt <number> [<number> ...]");
+        fmt.Fprintln(os.Stderr, "Error: Usage ./sqrt <number> [<number> ...]");
         os.Exit(1);
     }
 
