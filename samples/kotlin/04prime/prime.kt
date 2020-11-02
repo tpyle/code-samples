@@ -14,7 +14,7 @@ fun isPrime(num: Int): Boolean {
 
 fun main(args: Array<String>) {
     if (args.size == 0) {
-        System.err.println("Error: Usage `kotlin sqrt <number> [<number> ...]`");
+        System.err.println("Error: Usage `kotlin prime <number> [<number> ...]`");
         System.exit(1);
     }
     for (arg in args) {
