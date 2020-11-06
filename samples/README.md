@@ -51,9 +51,13 @@ New Concepts:
 * Branching logic based of whether an argument is provided
 * Reading from stdin 
 
-### 6. `Efficient sqrts`
+### 6. `cat`
 
-A modificaation of the `sqrt` script to use multiple threads/process for each sqrt job (if possible)
+Implementation of cat. Basically read a file and write to stdout (or read from stdin).
+
+### 7. `Efficient sqrts`
+
+A modification of the `sqrt` script to use multiple threads/process for each sqrt job (if possible)
 
 New Concepts:
 * threading/multiprocessing
