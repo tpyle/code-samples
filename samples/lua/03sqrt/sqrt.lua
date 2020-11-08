@@ -17,11 +17,16 @@ function find_sqrt (number)
     return x
 end
 
+if #arg == 0 then
+    eprintf("Error: Usage: lua sqrt.lua <number> [<number> ...]\n")
+    os.exit(1)
+end
+
 for i=1,#arg do
     number = tonumber(arg[i])
     if number == nil then
         eprintf("Error: Expected to receive a number. Received '%s'\n", arg[i])
-        os.exit(1)
+        os.exit(2)
     end
     printf("%s => %f\n", arg[i], find_sqrt(number))
 end
