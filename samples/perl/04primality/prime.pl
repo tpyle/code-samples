@@ -1,9 +1,12 @@
 #!/usr/bin/perl
+use warnings;
+use strict;
+
 use Math::Complex;
 
 sub IsPrime {
     my ($number) = @_;
-    $limit = sqrt($number);
+    my $limit = sqrt($number);
     for (2 .. $limit) {
         if ($number % $_ == 0) {
             return 0;
@@ -14,7 +17,7 @@ sub IsPrime {
 }
 
 
-$len = scalar(@ARGV);
+my $len = scalar(@ARGV);
 if ($len == 0) {
     print STDERR "Error: Expected to receive $0 <number> [<number> ...]\n";
     exit(1);
@@ -24,6 +27,6 @@ if ($len == 0) {
 foreach my $temp (@ARGV) {
     my $number = int($temp) or die "Expected to receive a number. Received '$temp'\n";
 
-    $prime = IsPrime($number) ? "true" : "false";
+    my $prime = IsPrime($number) ? "true" : "false";
     print("$number => $prime\n");
 }
