@@ -1,6 +1,8 @@
 #!/usr/bin/perl
+use strict;
+use warnings;
 
-$started = 0;
+my $started = 0;
 foreach my $temp (reverse @ARGV) {
     if (not $started) {
         $started = 1;
@@ -9,4 +11,6 @@ foreach my $temp (reverse @ARGV) {
     }
     print("$temp");
 }
-print("\n");
+if ($started) {
+    print("\n");
+}
