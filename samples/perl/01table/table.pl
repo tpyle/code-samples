@@ -1,4 +1,5 @@
 #!/usr/bin/perl
+use strict;
 use warnings;
 
 use constant LIMIT => 5;
