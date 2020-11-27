@@ -55,10 +55,18 @@ New Concepts:
 
 Implementation of cat. Basically read a file and write to stdout (or read from stdin).
 
-### 7. `Efficient sqrts`
+### 7. `env`
+
+Dumps a list of all the environment variables, in the `KEY=VALUE` format
+
+New Concepts:
+* Interaction with envrionment variables
+
+### 8. `efficient sqrts`
 
 A modification of the `sqrt` script to use multiple threads/process for each sqrt job (if possible)
 
 New Concepts:
 * threading/multiprocessing
 * piping if using multiprocessing (depending on the language)
+
