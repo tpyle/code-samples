@@ -1,0 +1,5 @@
+# Node modules folders
+node_modules/
+
+# Compiled js files
+*.js
