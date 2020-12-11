@@ -5,7 +5,7 @@ namespace LineCount {
     class Exec {
         static void Main(string[] args) {
             if (args.Length > 1) {
-                Console.Error.WriteLine("Error: Expected to receive at most 1 argument ./wc [<number>]");
+                Console.Error.WriteLine("Error: Expected to receive at most 1 argument ./wc [<file>]");
                 System.Environment.Exit(1);
             }
 
