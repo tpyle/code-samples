@@ -26,5 +26,5 @@ main([]) ->
 main([FileName]) ->
     read_lines(open_file(FileName));
 main(_) ->
-    io:format(standard_error, "Error: Usage wc.erl [<file>]~n", []),
+    io:format(standard_error, "Error: Usage cat.erl [<file>]~n", []),
     halt(1).
