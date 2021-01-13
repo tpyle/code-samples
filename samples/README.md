@@ -62,7 +62,16 @@ Dumps a list of all the environment variables, in the `KEY=VALUE` format
 New Concepts:
 * Interaction with envrionment variables
 
-### 8. `efficient sqrts`
+### 8. `objects`
+
+A simple object based program with shapes that computes area and perimeter for rectangles, squares, and trapezoids.
+
+Not done for languages without proper classing (i.e. bash)
+
+New Concepts:
+* Object Oriented Programming
+
+### 9. `efficient sqrts`
 
 A modification of the `sqrt` script to use multiple threads/process for each sqrt job (if possible)
 
