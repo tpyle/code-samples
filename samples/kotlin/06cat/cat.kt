@@ -2,7 +2,7 @@ import java.io.File;
 
 fun main(args: Array<String>) {
     if (args.size > 1) {
-        System.err.println("Error: Usage `kotlin wc [<file>]`");
+        System.err.println("Error: Usage `kotlin cat [<file>]`");
         System.exit(1);
     }
     if (args.size == 1) {
