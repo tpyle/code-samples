@@ -79,3 +79,9 @@ New Concepts:
 * threading/multiprocessing
 * piping if using multiprocessing (depending on the language)
 
+### 10. `simple shell`
+
+A simple shell, or more accurately a system of exploring a file system. Basically allows changing directory and enumerating files. Should also have functionality for reading file contents (i.e. cat, but it doesn't need to call out to external program or manage a path/environment variables)
+
+New Concepts:
+* Broader file system manipulation
