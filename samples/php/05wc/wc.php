@@ -1,15 +1,5 @@
 <?php
 
-function isPrime($number) {
-    $limit = sqrt($number);
-    for ($n = 2; $n <= $limit; $n++) {
-        if ($number % $n == 0) {
-            return false;
-        }
-    }
-    return true;
-}
-
 if ($argc > 2) {
     fwrite(STDERR, sprintf("Error: Usage ./%s [<file>]\n", $argv[0]));
     exit(1);
