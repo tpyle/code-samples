@@ -1,0 +1,1 @@
+gci env: | Sort-Object Name | % { Write-Host "$($_.Name)=$($_.Value)" }
