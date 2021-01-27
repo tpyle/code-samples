@@ -12,4 +12,4 @@ And then, compile a typescript file using `tsc <file>`.
 
 ## Other Notes
 
-It seems that VSCode has a bug where it will show that function is defined multiple times. You can fix that by manually init-ing tsc using `tsc --init`.
+It seems that VSCode has a bug where it will show that function is defined multiple times. You can fix that by manually init-ing the workspace using `tsc --init`.
