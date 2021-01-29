@@ -85,3 +85,9 @@ A simple shell, or more accurately a system of exploring a file system. Basicall
 
 New Concepts:
 * Broader file system manipulation
+
+### 11. `database`
+
+Interaction with a database. I was thinking something like mysql for now, but it would be common across the example.
+
+The idea would be to create a table of people, add 4 people, and then execute a few queries against it.
