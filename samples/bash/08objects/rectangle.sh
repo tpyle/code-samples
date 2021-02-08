@@ -25,4 +25,7 @@ EOF
 $SIDE_A * 2 + $SIDE_B * 2
 EOF
         ;;
+    FREE)
+        rm /tmp/$ID.rectangle
+        ;;
 esac
