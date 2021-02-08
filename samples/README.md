@@ -66,7 +66,8 @@ New Concepts:
 
 A simple object based program with shapes that computes area and perimeter for rectangles, squares, and trapezoids.
 
-Not done for languages without proper classing (i.e. bash)
+~~Not done for languages without proper classes (i.e. bash)~~   
+Crudely attempted in languages without proper classes
 
 New Concepts:
 * Object Oriented Programming
