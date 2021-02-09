@@ -28,4 +28,15 @@ EOF
     FREE)
         rm /tmp/$ID.rectangle
         ;;
+    GET)
+        SIDE=$3
+        source /tmp/$ID.rectangle
+        case $SIDE in
+            A)
+                echo $SIDE_A
+                ;;
+            B)
+                echo $SIDE_B
+                ;;
+        esac
 esac
