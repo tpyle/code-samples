@@ -11,3 +11,10 @@ SP=$(bash square.sh PERIMETER $SID)
 bash square.sh FREE $SID
 
 echo "SQUARE: A: $SA P: $SP"
+
+TID=$(bash triangle.sh STORE 5 1)
+TA=$(bash triangle.sh AREA $TID)
+TP=$(bash triangle.sh PERIMETER $TID)
+bash triangle.sh FREE $TID
+
+echo "TRIANGLE: A: $TA P: $TP"
