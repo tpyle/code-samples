@@ -15,7 +15,8 @@ float trianglePerimeter(Triangle* t) {
     return rectanglePerimeter(t->rectangle)/2 + t->hypotenuse;
 }
 
-float deleteTriangle(Triangle* t) {
-    deleteRectangle(t->rectangle);
-    free(t);
+float deleteTriangle(Triangle** t) {
+    deleteRectangle(&((*t)->rectangle));
+    free(*t);
+    *t = NULL;
 }

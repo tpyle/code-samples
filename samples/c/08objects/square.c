@@ -13,6 +13,7 @@ float squarePerimeter(Square* s) {
     return rectanglePerimeter(s);
 }
 
-float deleteSquare(Square* s) {
-    return deleteRectangle(s);
+float deleteSquare(Square** s) {
+    deleteRectangle(s);
+    *s = NULL;
 }

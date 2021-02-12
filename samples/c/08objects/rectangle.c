@@ -16,6 +16,7 @@ float rectanglePerimeter(Rectangle* r) {
     return r->width * 2 + r->height * 2;
 }
 
-float deleteRectangle(Rectangle* r) {
-    free(r);
+float deleteRectangle(Rectangle** r) {
+    free(*r);
+    *r = NULL;
 }

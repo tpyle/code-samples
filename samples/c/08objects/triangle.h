@@ -16,6 +16,6 @@ float triangleArea(Triangle* t);
 
 float trianglePerimeter(Triangle* t);
 
-float deleteTriangle(Triangle* t);
+float deleteTriangle(Triangle** t);
 
 #endif

@@ -12,6 +12,6 @@ float rectangleArea(Rectangle* r);
 
 float rectanglePerimeter(Rectangle* r);
 
-float deleteRectangle(Rectangle* r);
+float deleteRectangle(Rectangle** r);
 
 #endif

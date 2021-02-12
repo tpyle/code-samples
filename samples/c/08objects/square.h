@@ -12,6 +12,6 @@ float squareArea(Square* s);
 
 float squarePerimeter(Square* s);
 
-float deleteSquare(Square* s);
+float deleteSquare(Square** s);
 
 #endif
