@@ -92,3 +92,7 @@ New Concepts:
 Interaction with a database. I was thinking something like mysql for now, but it would be common across the example.
 
 The idea would be to create a table of people, add 4 people, and then execute a few queries against it.
+
+### 12. `messages`
+
+Simple Peer-to-peer messaging between two clients (maybe more if I feel like it)
