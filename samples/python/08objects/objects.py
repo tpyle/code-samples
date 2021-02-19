@@ -11,6 +11,18 @@ class Shape:
         pass
 
 
+class Circle(Shape):
+    radius = 0
+
+    def __init__(self, radius):
+        self.radius = radius
+    
+    def area(self):
+        return math.pi * self.radius * self.radius
+
+    def perimeter(self):
+        return 2 * math.pi * self.radius
+
 # For the purposes of this:
 #  _______________
 #  |              | side A
@@ -87,6 +99,8 @@ t = Triangle(2, 2)
 
 tr = Trapezoid(r, t)
 
+c = Circle(4)
+
 print(r.area(), r.perimeter())
 
 print(s.area(), s.perimeter())
@@ -94,3 +108,5 @@ print(s.area(), s.perimeter())
 print(t.area(), t.perimeter())
 
 print(tr.area(), tr.perimeter())
+
+print(c.area(), c.perimeter())
