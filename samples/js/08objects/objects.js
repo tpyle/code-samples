@@ -7,6 +7,23 @@ class Shape {
     perimeter() {}
 }
 
+class Circle extends Shape {
+    radius = 0;
+
+    constructor(radius) {
+        super();
+        this.radius = radius;
+    }
+
+    area() {
+        return Math.PI * this.radius * this.radius;
+    }
+
+    perimeter() {
+        return 2 * Math.PI * this.radius;
+    }
+}
+
 class Rectangle extends Shape {
     sideA = 0;
     sideB = 0;
@@ -81,8 +98,10 @@ const r = new Rectangle(2, 5);
 const s = new Square(4);
 const t = new Triangle(2, 5);
 const tz = new Trapezoid(r, t);
+const c = new Circle(4);
 
-console.log(r.area(), r.perimeter());
-console.log(s.area(), s.perimeter());
-console.log(t.area(), t.perimeter());
-console.log(tz.area(), tz.perimeter());
+console.log('Radius', r.area(), r.perimeter());
+console.log('Square', s.area(), s.perimeter());
+console.log('Triangle', t.area(), t.perimeter());
+console.log('Trapezoid', tz.area(), tz.perimeter());
+console.log('Circle', c.area(), c.perimeter());
