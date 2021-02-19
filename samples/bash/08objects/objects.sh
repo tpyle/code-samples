@@ -22,6 +22,11 @@ PP=$(bash trapezoid.sh PERIMETER $PID)
 
 echo "TRAPEZOID: A: $PA P: $PP"
 
+OID=$(bash circle.sh STORE 4)
+OA=$(bash circle.sh AREA $OID)
+OP=$(bash circle.sh PERIMETER $OID)
+
+echo "CIRCLE: A: $OA P: $OP"
 
 bash rectangle.sh FREE $RID
 bash square.sh FREE $SID
