@@ -24,11 +24,23 @@ class Rectangle: public Shape {
         float perimeter() {
             return this->width * 2 + this->height * 2;
         }
+
+        float getHeight() {
+            return this->height;
+        }
+
+        float getWidth() {
+            return this->width;
+        }
 };
 
 class Square: public Rectangle {
     public:
         Square(float side) : Rectangle(side, side) {}
+
+        float getSide() {
+            return getHeight();
+        }
 };
 
 class Triangle: public Rectangle {
@@ -46,6 +58,10 @@ class Triangle: public Rectangle {
         float perimeter() {
             return Rectangle::perimeter() / 2 + this->hypotenuse;
         }
+
+        float getHypotenuse() {
+            return this->hypotenuse;
+        }
 };
 
 class Circle: public Shape {
@@ -62,6 +78,10 @@ class Circle: public Shape {
 
         float perimeter() {
             return 2 * M_PI * this->radius;
+        }
+
+        float getRadius() {
+            return this->radius;
         }
 };
 
