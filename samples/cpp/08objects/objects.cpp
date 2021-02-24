@@ -85,14 +85,39 @@ class Circle: public Shape {
         }
 };
 
+class Trapezoid: public Shape {
+    private:
+        Triangle* triangle;
+        Rectangle* rectangle;
+    public:
+        Trapezoid(Triangle &triangle, Rectangle &rectangle) {
+            if (triangle.getHeight() != rectangle.getHeight()) {
+                throw "Trapezoid Triangle and Rectangle heights must be the same";
+            }
+            this->triangle = &triangle;
+            this->rectangle = &rectangle;
+        }
+
+        float area() {
+            return this->rectangle->area() + this->triangle->area();
+        }
+
+        float perimeter() {
+            return this->rectangle->perimeter() - this->rectangle->getHeight() +
+                this->triangle->perimeter() - this->triangle->getHeight();
+        }
+};
+
 int main() {
     Rectangle r(2, 5);
     Square s(5);
     Triangle t(2, 5);
     Circle c(5);
+    Trapezoid p(t,r);
 
     std::cout << "[Rectangle] Area: " << r.area() << " Perimeter: " << r.perimeter() << std::endl;
     std::cout << "[Square]    Area: " << s.area() << " Perimeter: " << s.perimeter() << std::endl;
     std::cout << "[Triangle]  Area: " << t.area() << " Perimeter: " << t.perimeter() << std::endl;
     std::cout << "[Circle]    Area: " << c.area() << " Perimeter: " << c.perimeter() << std::endl;
+    std::cout << "[Trapezoid] Area: " << p.area() << " Perimeter: " << p.perimeter() << std::endl;
 }
