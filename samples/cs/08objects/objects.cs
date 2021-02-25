@@ -40,7 +40,7 @@ namespace Objects {
         float hypotenuse;
 
         public Triangle(float height, float width) : base(height, width) {
-            this.hypotenuse = (float)Math.Sqrt(this.height * this.height + this.width * this.width);
+            this.hypotenuse = (float)Math.Sqrt(height * height + width * width);
         }
 
         public new float area() {
