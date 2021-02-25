@@ -56,6 +56,26 @@ namespace Objects {
         }
     }
 
+    class Circle : Shape {
+        float radius;
+
+        public Circle(float radius) {
+            this.radius = radius;
+        }
+
+        public float area() {
+            return (float)Math.PI * this.radius * this.radius;
+        }
+
+        public float perimeter() {
+            return 2 * (float)Math.PI * this.radius;
+        }
+
+        public float getRadius()  {
+            return this.radius;
+        }
+    }
+
     class Exec {
         static void Main(string[] args) {
             Rectangle r = new Rectangle(5, 2);
@@ -64,6 +84,8 @@ namespace Objects {
             Console.WriteLine("[Square]    A: {0}, P: {1}", s.area(), s.perimeter());
             Triangle t = new Triangle(3, 2);
             Console.WriteLine("[Triangle]  A: {0}, P: {1}", t.area(), t.perimeter());
+            Circle c = new Circle(4);
+            Console.WriteLine("[Circle]    A: {0}, P: {1}", c.area(), c.perimeter());
         }
     }
 }
