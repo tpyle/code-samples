@@ -26,6 +26,10 @@ namespace Objects {
         public float getHeight() {
             return this.height;
         }
+
+        public float getWidth() {
+            return this.width;
+        }
     }
 
     class Square : Rectangle {
@@ -76,6 +80,22 @@ namespace Objects {
         }
     }
 
+    class Trapezoid : Rectangle {
+        Triangle triangle;
+
+        public Trapezoid(float height, float totalWidth, float triangleWidth): base(height, totalWidth) {
+            this.triangle = new Triangle(height, triangleWidth);
+        }
+
+        public new float area() {
+            return base.area() - this.triangle.area();
+        }
+
+        public new float perimeter() {
+            return base.perimeter() - base.getHeight() - this.triangle.getWidth() + this.triangle.getHypotenuse();
+        }
+    }
+
     class Exec {
         static void Main(string[] args) {
             Rectangle r = new Rectangle(5, 2);
@@ -86,6 +106,8 @@ namespace Objects {
             Console.WriteLine("[Triangle]  A: {0}, P: {1}", t.area(), t.perimeter());
             Circle c = new Circle(4);
             Console.WriteLine("[Circle]    A: {0}, P: {1}", c.area(), c.perimeter());
+            Trapezoid p = new Trapezoid(2, 5, 2);
+            Console.WriteLine("[Trapezoid] A: {0}, P: {1}", p.area(), p.perimeter());
         }
     }
 }
