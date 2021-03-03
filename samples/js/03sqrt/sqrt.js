@@ -15,8 +15,7 @@ if (require.main === module) {
         console.error("Error: Usage node sqrt.js <number> [<number> ...]");
         process.exit(1);
     }
-    process.argv.slice(2).map(arg=>{
-        const [number] = arg;
+    process.argv.slice(2).map(number=>{
         const _number = Number(number);
         if (isNaN(_number)) {
             console.error(`Error: <number> must be a numeric value. Received '${number}'`);
