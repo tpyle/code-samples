@@ -37,19 +37,19 @@ class Square extends Rectangle {
 }
 
 class Triangle extends Rectangle {
-  double hypotenuse;
+    double hypotenuse;
 
-  Triangle(double height, double width) : super(height, width) {
-    this.hypotenuse = sqrt(height * height + width * width);
-  }
+    Triangle(double height, double width) : super(height, width) {
+        this.hypotenuse = sqrt(height * height + width * width);
+    }
 
-  double area() {
-    return super.area() / 2;
-  }
+    double area() {
+        return super.area() / 2;
+    }
 
-  double perimeter() {
-    return super.perimeter() / 2 + this.hypotenuse;
-  }
+    double perimeter() {
+        return super.perimeter() / 2 + this.hypotenuse;
+    }
 }
 
 void main() {
