@@ -1,4 +1,4 @@
-import "dart:io";
+import "dart:math";
 
 abstract class Shape {
     double area();
@@ -36,9 +36,27 @@ class Square extends Rectangle {
     }
 }
 
+class Triangle extends Rectangle {
+  double hypotenuse;
+
+  Triangle(double height, double width) : super(height, width) {
+    this.hypotenuse = sqrt(height * height + width * width);
+  }
+
+  double area() {
+    return super.area() / 2;
+  }
+
+  double perimeter() {
+    return super.perimeter() / 2 + this.hypotenuse;
+  }
+}
+
 void main() {
     Shape r = Rectangle(5, 2);
     print("[Rectange] A: ${r.area()} P: ${r.perimeter()}");
     Shape s = Square(4);
     print("[Square]   A: ${s.area()} P: ${s.perimeter()}");
+    Triangle t = Triangle(4, 2);
+    print("[Triangle] A: ${t.area()} P: ${t.perimeter()}");
 }
