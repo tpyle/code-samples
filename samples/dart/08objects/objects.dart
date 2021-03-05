@@ -50,20 +50,28 @@ class Triangle extends Rectangle {
     double perimeter() {
         return super.perimeter() / 2 + this.hypotenuse;
     }
+
+    double getHypotenuse() {
+      return this.hypotenuse;
+    }
 }
 
 class Circle extends Shape {
-  double radius;
+    double radius;
 
-  Circle(this.radius);
+    Circle(this.radius);
 
-  double area() {
-    return pi * this.radius * this.radius;
-  }
+    double area() {
+        return pi * this.radius * this.radius;
+    }
 
-  double perimeter() {
-    return 2 * pi * this.radius;
-  }
+    double perimeter() {
+        return 2 * pi * this.radius;
+    }
+
+    double getRadius() {
+        return this.radius;
+    }
 }
 
 void main() {
