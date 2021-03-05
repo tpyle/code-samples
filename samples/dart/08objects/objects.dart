@@ -52,6 +52,20 @@ class Triangle extends Rectangle {
     }
 }
 
+class Circle extends Shape {
+  double radius;
+
+  Circle(this.radius);
+
+  double area() {
+    return pi * this.radius * this.radius;
+  }
+
+  double perimeter() {
+    return 2 * pi * this.radius;
+  }
+}
+
 void main() {
     Shape r = Rectangle(5, 2);
     print("[Rectange] A: ${r.area()} P: ${r.perimeter()}");
@@ -59,4 +73,6 @@ void main() {
     print("[Square]   A: ${s.area()} P: ${s.perimeter()}");
     Triangle t = Triangle(4, 2);
     print("[Triangle] A: ${t.area()} P: ${t.perimeter()}");
+    Circle c = Circle(3);
+    print("[Circle]   A: ${c.area()} P: ${c.perimeter()}");
 }
