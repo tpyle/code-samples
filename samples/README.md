@@ -96,3 +96,7 @@ The idea would be to create a table of people, add 4 people, and then execute a 
 ### 12. `messages`
 
 Simple Peer-to-peer messaging between two clients (maybe more if I feel like it)
+
+### 13. `api`
+
+A simple API. I'm thinking it will fufill some of the other things we've done but over an HTTP API (i.e. `post /tasks/sqrt/4 => 2`)
