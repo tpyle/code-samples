@@ -1,6 +1,6 @@
 package main
 
-import "main/shapes"
+import "main/rectangle"
 
 func main() {
 	r := rectangle.New(5, 2);
