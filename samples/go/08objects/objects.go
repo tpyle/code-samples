@@ -3,6 +3,7 @@ package main
 import "main/rectangle"
 import "main/square"
 import "main/circle"
+import "main/triangle"
 
 func main() {
 	r := rectangle.New(5, 2);
@@ -11,4 +12,6 @@ func main() {
 	square.Print(s);
 	c := circle.New(3);
 	circle.Print(c);
+	t := triangle.New(5, 2);
+	triangle.Print(t);
 }
