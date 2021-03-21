@@ -6,25 +6,25 @@ import (
 )
 
 type Square struct {
-	r rectangle.Rectangle
+	rectangle rectangle.Rectangle
 }
 
 func New(side float64) Square {
 	return Square{
-		r: rectangle.New(side, side),
+		rectangle: rectangle.New(side, side),
 	}
 }
 
 func Area(s Square) float64 {
-	return rectangle.Area(s.r)
+	return rectangle.Area(s.rectangle)
 }
 
 func Perimeter(s Square) float64 {
-	return rectangle.Perimeter(s.r)
+	return rectangle.Perimeter(s.rectangle)
 }
 
 func GetSide(s Square) float64 {
-	return rectangle.GetHeight(s.r)
+	return rectangle.GetHeight(s.rectangle)
 }
 
 func Print(s Square) {
