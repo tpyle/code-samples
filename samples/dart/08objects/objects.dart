@@ -87,7 +87,7 @@ class Trapezoid extends Rectangle {
 
     double perimeter() {
         return super.perimeter() - this.getHeight() + this.trianglePart.getHypotenuse()
-            - this.trianglePart.getWidth();
+            - this.trianglePart.getHeight();
     }
 }
 
