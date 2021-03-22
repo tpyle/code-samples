@@ -3,19 +3,19 @@ package main;
 import main.Shape;
 
 public class Rectangle extends Shape {
-    private float height;
-    private float width;
+    private double height;
+    private double width;
 
-    public Rectangle(float width, float height) {
+    public Rectangle(double width, double height) {
         this.height = height;
         this.width = width;
     }
 
-    public float perimeter() {
+    public double perimeter() {
         return this.height * 2 + this.width * 2;
     }
 
-    public float area() {
+    public double area() {
         return this.height * this.width;
     }
 }
