@@ -11,7 +11,6 @@ public class Circle extends Shape {
     }
 
     public double area() {
-        System.out.println(this.getClass().getName());
         return Math.PI * this.radius * this.radius;
     }
 
