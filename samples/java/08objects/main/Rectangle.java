@@ -18,4 +18,12 @@ public class Rectangle extends Shape {
     public double area() {
         return this.height * this.width;
     }
+
+    public double getHeight() {
+        return this.height;
+    }
+
+    public double getWidth() {
+        return this.width;
+    }
 }
