@@ -19,7 +19,7 @@ public class Triangle extends Rectangle {
         return super.area() / 2;
     }
 
-    public double getTriangle() {
+    public double getHypotenuse() {
         return this.hypotenuse;
     }
 }
