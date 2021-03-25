@@ -104,3 +104,7 @@ A simple API. I'm thinking it will fufill some of the other things we've done bu
 ### 14. `graph`
 
 Implementation of graph, as well as implementation of djikstra's algorithm. I plan to have a hard coded graph, the user will input two points (say A, D) and the program will print out the route
+
+### 15. `trie`
+
+Work on some more complex data structures, in this case it will be an implementation of a trie. Whether that trie is compressed or not might be an interesting experiment.
