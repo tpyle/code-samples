@@ -3,6 +3,7 @@ package main;
 import main.Rectangle;
 import main.Circle;
 import main.Square;
+import main.Triangle;
 
 public class objects {
     public static void main(String[] args) {
@@ -12,5 +13,7 @@ public class objects {
         System.out.println(c);
         Square q = new Square(5);
         System.out.println(q);
+        Triangle t = new Triangle(4, 2);
+        System.out.println(t);
     }
 }
