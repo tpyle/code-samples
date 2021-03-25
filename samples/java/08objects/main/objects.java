@@ -15,5 +15,7 @@ public class objects {
         System.out.println(q);
         Triangle t = new Triangle(4, 2);
         System.out.println(t);
+        Trapezoid p = new Trapezoid(6, 4, 2);
+        System.out.println(p);
     }
 }
