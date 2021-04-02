@@ -12,7 +12,7 @@ abstract class Shape {
     }
 }
 
-class Rectangle(height: Double, width: Double) : Shape() {
+open class Rectangle(height: Double, width: Double) : Shape() {
     val height = height;
     val width = width;
 
@@ -24,3 +24,5 @@ class Rectangle(height: Double, width: Double) : Shape() {
         return this.height * 2 + this.width * 2;
     }
 }
+
+class Square(side: Double) : Rectangle(side, side);
