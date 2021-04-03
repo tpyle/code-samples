@@ -49,3 +49,15 @@ class Circle(radius: Double): Shape() {
         return 2 * PI * this.radius;
     }
 }
+
+class Trapezoid(height: Double, totalWidth: Double, triangleWidth: Double): Rectangle(height, totalWidth) {
+    val trianglePart = Triangle(height, triangleWidth);
+
+    override fun area(): Double {
+        return super.area() - this.trianglePart.area();
+    }
+
+    override fun perimeter(): Double {
+        return super.perimeter() - this.height - this.trianglePart.width + this.trianglePart.hypotenuse;
+    }
+}
