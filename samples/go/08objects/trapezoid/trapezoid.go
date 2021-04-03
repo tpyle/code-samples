@@ -23,7 +23,7 @@ func Area(t Trapezoid) float64 {
 }
 
 func Perimeter(t Trapezoid) float64 {
-	return rectangle.Perimeter(t.totalRectangle) - rectangle.GetHeight(t.totalRectangle) + triangle.Perimeter(t.trianglePart) - triangle.GetHeight(t.trianglePart)
+	return rectangle.Perimeter(t.totalRectangle) - rectangle.GetHeight(t.totalRectangle) + triangle.GetHypotenuse(t.trianglePart) - triangle.GetWidth(t.trianglePart)
 }
 
 func Print(t Trapezoid) {

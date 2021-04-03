@@ -17,6 +17,6 @@ func main() {
 	circle.Print(c)
 	t := triangle.New(5, 2)
 	triangle.Print(t)
-	p := trapezoid.New(10, 4, 2)
+	p := trapezoid.New(5, 2, 3)
 	trapezoid.Print(p)
 }
