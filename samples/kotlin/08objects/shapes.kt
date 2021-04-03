@@ -1,10 +1,7 @@
 package shapes;
 
 import kotlin.math.sqrt
-
-fun importTest() {
-    println("We cruising");
-}
+import kotlin.math.PI
 
 abstract class Shape {
     abstract fun area(): Double;
@@ -38,5 +35,17 @@ class Triangle(height: Double, width: Double): Rectangle(height, width) {
 
     override fun perimeter(): Double {
         return super.perimeter() / 2 + this.hypotenuse;
+    }
+}
+
+class Circle(radius: Double): Shape() {
+    val radius = radius;
+
+    override fun area(): Double {
+        return PI * this.radius * this.radius;
+    }
+
+    override fun perimeter(): Double {
+        return 2 * PI * this.radius;
     }
 }
