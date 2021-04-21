@@ -9,6 +9,7 @@ The current list of languages that I plan to have in here are as follows:
 * C
 * C++
 * C#
+* Clojure
 * Dart
 * Erlang
 * Go
