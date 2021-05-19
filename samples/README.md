@@ -108,3 +108,7 @@ Implementation of graph, as well as implementation of djikstra's algorithm. I pl
 ### 15. `trie`
 
 Work on some more complex data structures, in this case it will be an implementation of a trie. Whether that trie is compressed or not might be an interesting experiment.
+
+### 16. `dice roll`
+
+A script to roll a stat line for D&D, basically roll 7 rows of 4 d6's and pick the 3 highest of each row
