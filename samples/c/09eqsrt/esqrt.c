@@ -14,13 +14,13 @@ double findSqrt(double number) {
     return x;
 }
 
+
 void* handleArgument(void* arg) {
     char* eptr;
     double number = strtod((char*)arg, &eptr);
 
-
     if (*eptr != 0) {
-        printf("Error: Expected to receive a number, recieved %s\n", (char*)arg);
+        fprintf(stderr, "Error: Expected to receive a number, recieved '%s'\n", (char*)arg);
         return NULL;
     }
     printf("%f => %f\n", number, findSqrt(number));
@@ -30,7 +30,7 @@ void* handleArgument(void* arg) {
 
 int main(int argc, char** argv) {
     if (argc < 2) {
-        printf("Error: Usage %s <number> [<number> ...]\n", argv[0]);
+        fprintf(stderr, "Error: Usage %s <number> [<number> ...]\n", argv[0]);
         return 1;
     }
 
