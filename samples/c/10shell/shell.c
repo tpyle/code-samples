@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include <errno.h>
 
@@ -97,13 +98,21 @@ char* readline() {
     }
 }
 
+size_t getCommand(char* ostring) {
+    int end = -1;
+    while (ostring[++end] != 0 && !isWhiteSpace(ostring[end]));
+    return end;
+}
+
 int main() {
     char* currentLine = NULL;
     while (TRUE) {
         printf("> ");
         currentLine = readline();
         if (currentLine != NULL) {
-            printf("%s\n", currentLine);
+            printf("'%s'\n", currentLine);
+            size_t length = getCommand(currentLine);
+            printf("%ld\n", length);
             free(currentLine);
         } else {
             // EOF received, breaking
