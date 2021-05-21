@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <errno.h>
 
-#define TRUE 1;
-#define FALSE 0;
+#define TRUE 1
+#define FALSE 0
 
 void catFile() {
     
@@ -80,8 +81,33 @@ char* stripString(char* string) {
 }
 
 char* readline() {
-
+    char* line = NULL;
+    size_t length;
+    int result = getline(&line, &length, stdin);
+    if (result < 0) {
+        if (result == EOF) {
+            free(line);
+            return NULL;
+        }
+        return line;
+    } else {
+        char* copy = stripString(line);
+        free(line);
+        return copy;
+    }
 }
 
 int main() {
+    char* currentLine = NULL;
+    while (TRUE) {
+        printf("> ");
+        currentLine = readline();
+        if (currentLine != NULL) {
+            printf("%s\n", currentLine);
+            free(currentLine);
+        } else {
+            // EOF received, breaking
+            break;
+        }
+    }
 }
