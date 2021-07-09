@@ -18,7 +18,7 @@ if __name__ == "__main__":
         print("Error: Usage python sqrt.py <number> [<number> ...]")
         sys.exit(1)
     
-    with ThreadPoolExecutor() as executor:
+    with ThreadPoolExecutor(max_workers=50) as executor:
         results = []
         for arg in sys.argv[1:]:
             try:
