@@ -92,10 +92,49 @@ std::vector<std::string> split_command(std::string* argv) {
 }
 
 int main() {
-    print_current_directory();
-    cat_file("shell.cpp");
-    list_files();
-    change_directory("../");
-    list_files();
-    print_current_directory();
+    /**
+     * Reads input from the user and executes specified commands.
+     * 
+     */
+
+    std::string command;
+    
+    while (true) {
+        std::cout << "shell> ";
+        if (!getline(std::cin, command)) {
+            break;
+        }
+        if (command == "exit") {
+            break;
+        }
+        std::vector<std::string> args = split_command(&command);
+        if (args.size() == 0) {
+            continue;
+        }
+        if (args.at(0) == "cd") {
+            if (args.size() == 1) {
+                change_directory(".");
+            } else if (args.size() == 2) {
+                change_directory(args.at(1));
+            } else {
+                std::cout << "cd: too many arguments" << std::endl;
+            }
+        } else if (args.at(0) == "ls") {
+            if (args.size() == 1) {
+                list_files();
+            } else {
+                std::cout << "ls: too many arguments" << std::endl;
+            }
+        } else if (args.at(0) == "cat") {
+            if (args.size() == 2) {
+                cat_file(args.at(1));
+            } else {
+                std::cout << "cat: too many arguments" << std::endl;
+            }
+        } else if (args.at(0) == "pwd") {
+            print_current_directory();
+        } else {
+            std::cout << "unknown command" << std::endl;
+        }
+    }
 }
